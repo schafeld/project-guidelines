@@ -1,8 +1,9 @@
 
-[中文版](./README-zh.md)
+ | [English](./README.md)
+ | [中文版](./README-zh.md)
  | [日本語版](./README-ja.md)
  | [한국어](./README-ko.md)
- | [Deutsch](./README-de.md)
+ | Deutsch
 
 [<img src="./images/hive-red-logo.png" width="180" height="180">](http://wearehive.co.uk/)
 
