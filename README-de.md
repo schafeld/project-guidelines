@@ -39,25 +39,26 @@ Falls du gerne neue bewährte Arbeitsweisen empfehlen oder unüblich gewordene e
 ![Git](/images/branching.png)
 <a name="some-git-rules"></a>
 
-### 1.1 Some Git rules
-There are a set of rules to keep in mind:
-* Perform work in a feature branch.
+### 1.1 Regeln für Git
+Es gibt eine Reihe von Regeln zu merken: 
+* Arbeite in einem _Feature Branch_.
     
-    _Why:_
-    >Because this way all work is done in isolation on a dedicated branch rather than the main branch. It allows you to submit multiple pull requests without confusion. You can iterate without polluting the master branch with potentially unstable, unfinished code. [read more...](https://www.atlassian.com/git/tutorials/comparing-workflows#feature-branch-workflow)
-* Branch out from `develop`
+    _Warum:_
+    >Weil so alle Entwicklung isoliert in jeweils dafür vorgesehenen Branches passiert statt in einem Haupt-Branch. So kann man auch parallel entwickeln und mehrere _Pull Requests_ stellen, ohne Durcheinander zu verursachen. Die Entwicklung verläuft schrittweise, ohne Verunreinigung des _Master Branches_ durch unfertigen, instabilen Code zu riskieren. [Mehr dazu...](https://www.atlassian.com/git/tutorials/comparing-workflows#feature-branch-workflow)
+
+* Branches anlegen von `develop`
     
-    _Why:_
-    >This way, you can make sure that code in master will almost always build without problems, and can be mostly used directly for releases (this might be overkill for some projects).
+    _Warum:_
+    > Auf diese Weise wird garantiert, dass mit dem Code im _master_ jederzeit problemlos ein Release gebaut werden kann (diese Regel kann in manchen Projekten zu viel des Guten sein).
 
-* Never push into `develop` or `master` branch. Make a Pull Request.
+* Niemals in `develop` oder `master` pushen. Stelle einen _Pull Request_.
     
-    _Why:_
-    > It notifies team members that they have completed a feature. It also enables easy peer-review of the code and dedicates forum for discussing the proposed feature.
+    _Warum:_
+    > So werden Teammitglieder über die Fertigstellung eines Features informiert. Außerdem erleichtert dies den Begutachtungsprozess (Peer Review) und schafft eine klarumrissene Diskussionsgrundlage für einen Entwicklungsvorschlag.
 
-* Update your local `develop` branch and do an interactive rebase before pushing your feature and making a Pull Request.
+* Aktualisiere deinen lokalen `develop` Branch und führe ein interaktives _Rebase_ deines Feature Branches durch, bevor du ihn pusht und deinen _Pull Request_ stellst. 
 
-    _Why:_
+    _Warum:_
     > Rebasing will merge in the requested branch (`master` or `develop`) and apply the commits that you have made locally to the top of the history without creating a merge commit (assuming there were no conflicts). Resulting in a nice and clean history. [read more ...](https://www.atlassian.com/git/tutorials/merging-vs-rebasing)
 
 * Resolve potential conflicts while rebasing and before making a Pull Request.
